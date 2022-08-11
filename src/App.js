@@ -1,22 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { CartWithShipping, CartWithoutShipping } from './pages';
+import theme from './style/theme';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CartWithShipping />} />
+        <Route path="without-shipping" element={<CartWithoutShipping />} />
+
+        <Route path="*" element={<p>Page not Found</p>} />
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
+);
 
 export default App;
