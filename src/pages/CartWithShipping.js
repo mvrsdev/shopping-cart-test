@@ -3,7 +3,6 @@ import { Button, Header, SubTotal } from '../components';
 import theme from '../style/theme';
 
 const CartContainer = styled.div`
-  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -59,7 +58,6 @@ const LoginPage = () => (
         <br />
         <p>oi</p>
         <br />
-        <p>oi</p>
       </main>
       <SubTotalRow>
         <SubTotal  />
