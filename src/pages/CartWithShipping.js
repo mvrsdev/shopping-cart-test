@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Header from '../components/Header';
 import theme from '../style/theme';
 
 const CartContainer = styled.div`
@@ -12,7 +13,7 @@ const CartContainer = styled.div`
 
 const CartBox = styled.div`
   box-sizing: border-box;
-  border: 1px solid ${(props) => props.theme.borderColor};
+  border: 1px solid ${theme.borderColor};
   border-radius: 16px;
   width: 500px;
   min-height: 500px;
@@ -20,17 +21,10 @@ const CartBox = styled.div`
   box-shadow: 0 0 32px 8px #dadce0;
 `;
 
-// h1 {
-//   color: #202124;
-//   padding-bottom: 0;
-//   font-size: 24px;
-//   font-weight: 500;
-// }
-
 const LoginPage = () => (
   <CartContainer>
     <CartBox>
-
+      <Header />
     </CartBox>
   </CartContainer>
 );
