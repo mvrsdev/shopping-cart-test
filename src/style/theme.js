@@ -1,6 +1,6 @@
 const theme = {
   defaultColorText: '#202124',
-  disabledColorText: '#f8f9fa',
+  disabledColorText: '#a5a5a5',
   borderColor: '#dadce0',
   buttonColorText: '#ffffff',
   buttonColor: '#1a73e8',
