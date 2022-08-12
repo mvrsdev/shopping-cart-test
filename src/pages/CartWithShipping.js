@@ -52,16 +52,17 @@ const LoginPage = () => (
       <Header />
       <ProductsRow>
         <Product/>
-        <br />
-        <p>test</p>
-        <br />
-        <p>test</p>
-        <br />
-        <p>test</p>
-        <br />
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
       </ProductsRow>
       <SubTotalRow>
-        <SubTotal />
+        <SubTotal freeShippingOn/>
       </SubTotalRow>
       <CheckoutRow>
         <Button>
