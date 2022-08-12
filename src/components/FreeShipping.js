@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../style/theme';
 
 const ShippingRow = styled.div`
   display: flex;
@@ -8,8 +9,8 @@ const ShippingRow = styled.div`
   padding: 8px;
   margin-top: 24px;
   width: 75%;
-  background-color: #c0ff9c;
-  color: #1e6f00;
+  background-color: ${theme.freeShippingBackground};
+  color: ${theme.freeShippingText};
   border-radius: 16px;
   font-weight: 600;
 `;
