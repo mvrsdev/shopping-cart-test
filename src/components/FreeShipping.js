@@ -17,13 +17,12 @@ const ShippingRow = styled.div`
 
 const FreeShipping = () => (
   <ShippingRow>
-    <span>Parabéns, sua compra tem frete grátis!</span>
-    {/* <div>
-      <span>Parabéns, sua compra</span>
+    <div>
+      <span style={{ paddingRight:4 }} >Parabéns, sua compra</span>
     </div>
     <div>
       <span>tem frete grátis!</span>
-    </div> */}
+    </div>
   </ShippingRow>
 );
 
