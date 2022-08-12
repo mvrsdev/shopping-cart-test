@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import theme from '../style/theme';
 
 const ShippingRow = styled.div`
   text-align: center;
   padding: 12px 16px;
   margin-top: 24px;
   width: 75%;
-  background-color: ${theme.freeShippingBackground};
-  color: ${theme.freeShippingText};
+  background-color: ${(props) => props.theme.freeShippingBackground};
+  color: ${(props) => props.theme.freeShippingText};
   border-radius: 2rem;
   font-weight: 600;
 `;

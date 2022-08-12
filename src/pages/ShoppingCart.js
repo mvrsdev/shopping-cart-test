@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Button, Header, SubTotal, ProductsList } from '../components';
-import theme from '../style/theme';
 import { getFreeShippingCart, getStandardCart } from '../api/api';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -10,16 +9,16 @@ const CartContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${theme.background};
+  background: ${(props) => props.theme.background};
 `;
 
 const CartBox = styled.div`
   box-sizing: border-box;
-  border: 1px solid ${theme.borderColor};
+  border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 16px;
   width: 500px;
   min-height: 500px;
-  background: ${theme.backgroundBox};
+  background: ${(props) => props.theme.backgroundBox};
   box-shadow: 0 0 32px 8px #dadce0;
   display: flex;
   flex-direction: column;
@@ -31,7 +30,7 @@ const SubTotalRow = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid ${theme.borderColor};
+  border-top: 1px solid ${(props) => props.theme.borderColor};
   padding: 24px 0;
 `;
 
@@ -39,7 +38,7 @@ const CheckoutRow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid ${theme.borderColor};
+  border-top: 1px solid ${(props) => props.theme.borderColor};
   padding: 24px 0;
 `;
 
