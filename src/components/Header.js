@@ -6,13 +6,16 @@ const HeaderRow = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 24px;
+  font-size: 24px;
+  font-weight: 900;
   width: 100%;
   border-bottom: 1px solid ${theme.borderColor};
+  padding: 24px 0 ;
 `;
 
 const Header = () => (
   <HeaderRow>
-    <h2>Meu carrinho</h2>
+    <span>Meu carrinho</span>
   </HeaderRow>
 );
 
