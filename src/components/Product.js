@@ -8,7 +8,6 @@ const ProductContainer = styled.div`
   ul li {
     text-decoration: none;
     list-style: none;
-    color: #4d5156;
     font-size: 14px;
   }
 `;
@@ -17,15 +16,15 @@ const DescriptionContainer = styled.div`
   flex-direction: column;
 `;
 
-const Product = ({img, title, price, discountedPrice}) => (
+const Product = ({ img, title, price, discountedPrice }) => (
   <ProductContainer>
     <ul>
       <li>
-        {img}
+        <img src={img} alt="Imagem do Produto" width={100} />
         <DescriptionContainer>
-        {title}
-        {price}
-        {discountedPrice}
+          {title}
+          {price}
+          {discountedPrice}
         </DescriptionContainer>
       </li>
     </ul>
