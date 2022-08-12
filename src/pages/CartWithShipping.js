@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Button, Header, SubTotal } from '../components';
+import { Button, Header, Product, SubTotal } from '../components';
 import theme from '../style/theme';
 
 const CartContainer = styled.div`
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,20 +21,12 @@ const CartBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: 48px 24px;
-
-  main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
 `;
 
-const CheckoutRow = styled.div`
+const ProductsRow = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid ${theme.borderColor};
-  padding: 24px 0;
+  flex-direction: column;
+  flex-grow: 1;
 `;
 
 const SubTotalRow = styled.div`
@@ -46,21 +38,30 @@ const SubTotalRow = styled.div`
   padding: 24px 0;
 `;
 
+const CheckoutRow = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid ${theme.borderColor};
+  padding: 24px 0;
+`;
+
 const LoginPage = () => (
   <CartContainer>
     <CartBox>
       <Header />
-      <main>
+      <ProductsRow>
+        <Product/>
         <br />
-        <p>oi</p>
+        <p>test</p>
         <br />
-        <p>oi</p>
+        <p>test</p>
         <br />
-        <p>oi</p>
+        <p>test</p>
         <br />
-      </main>
+      </ProductsRow>
       <SubTotalRow>
-        <SubTotal  />
+        <SubTotal />
       </SubTotalRow>
       <CheckoutRow>
         <Button>
