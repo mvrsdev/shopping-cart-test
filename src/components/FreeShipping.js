@@ -6,6 +6,7 @@ const ShippingRow = styled.div`
   align-items: center;
   flex-wrap: wrap;
   padding: 8px;
+  margin-top: 24px;
   width: 75%;
   background-color: #c0ff9c;
   color: #1e6f00;

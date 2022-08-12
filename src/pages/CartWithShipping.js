@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import Button from '../components/Button';
-import FreeShipping from '../components/FreeShipping';
-import Header from '../components/Header';
+import { Button, Header, SubTotal } from '../components';
 import theme from '../style/theme';
 
 const CartContainer = styled.div`
@@ -32,7 +30,7 @@ const CartBox = styled.div`
   }
 `;
 
-const FooterRow = styled.div`
+const CheckoutRow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,23 +52,23 @@ const LoginPage = () => (
     <CartBox>
       <Header />
       <main>
-        <br/>
+        <br />
         <p>oi</p>
-        <br/>
+        <br />
         <p>oi</p>
-        <br/>
+        <br />
         <p>oi</p>
-        <br/>
+        <br />
         <p>oi</p>
       </main>
       <SubTotalRow>
-        <FreeShipping />
+        <SubTotal  />
       </SubTotalRow>
-      <FooterRow>
+      <CheckoutRow>
         <Button>
           <span>Finalizar compra</span>
         </Button>
-      </FooterRow>
+      </CheckoutRow>
     </CartBox>
   </CartContainer>
 );
