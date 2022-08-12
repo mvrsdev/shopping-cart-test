@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { Button, Header, Product, SubTotal } from '../components';
 import theme from '../style/theme';
+import { Over10, Under10 } from '../mocks/API';
+
+const API = Over10;
 
 const CartContainer = styled.div`
   min-height: 100vh;
@@ -51,18 +54,15 @@ const LoginPage = () => (
     <CartBox>
       <Header />
       <ProductsRow>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
+        <Product
+          img={API.items[0].imageUrl}
+          title={API.items[0].name}
+          price={API.items[0].listPrice / 100}
+          discountedPrice={API.items[0].sellingPrice / 100}
+        />
       </ProductsRow>
       <SubTotalRow>
-        <SubTotal freeShippingOn/>
+        <SubTotal sale={API} />
       </SubTotalRow>
       <CheckoutRow>
         <Button>
