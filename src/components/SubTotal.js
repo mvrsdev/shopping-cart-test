@@ -10,16 +10,18 @@ const TotalRow = styled.div`
   font-weight: 900;
 `;
 
-const SubTotal = ({ freeShippingOn }) => {
+const SubTotal = ({ sale }) => {
   const renderFreeShipping = () => <FreeShipping />;
+
+  const total = sale.value/100;
 
   return (
     <>
       <TotalRow>
         <div>Total</div>
-        <div>R$ 13,31</div>
+        <div>R$ {total.toFixed(2)}</div>
       </TotalRow>
-      {freeShippingOn ? renderFreeShipping() : undefined}
+      {total >= 10 ? renderFreeShipping() : undefined}
     </>
   );
 };
